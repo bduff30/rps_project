@@ -1,12 +1,14 @@
-let hand = ["Rock", "Paper", "Scissors"];
-let result = document.querySelector(".result");
+const hand = ["Rock", "Paper", "Scissors"];
+const result = document.querySelector(".result");
 let playerWins = 0;
 let computerWins = 0;
-let score = document.querySelector(".score");
+const score = document.querySelector(".score");
+const computerChoice = document.querySelector(".computerChoice");
 
 function computerPlay() {
   let randomIndex = Math.floor(Math.random() * 3);
   console.log("Computer: " + hand[randomIndex]);
+  computerChoice.textContent = "Computer Selects: " + hand[randomIndex];
   return hand[randomIndex];
 }
 
